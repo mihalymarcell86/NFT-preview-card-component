@@ -83,7 +83,7 @@ img {
 }
 
 .card__image:hover::after {
-  content: url("images/icon-view.svg");
+  content: url("./images/icon-view.svg");
   position: absolute;
   top: 50%;
   left: 50%;
