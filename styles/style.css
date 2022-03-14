@@ -1,0 +1,177 @@
+:root {
+  /* PRIMARY COLORS */
+  --soft-blue: hsl(215, 51%, 70%);
+  --cyan: hsl(178, 100%, 50%);
+
+  /* NEUTRAL COLORS */
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --line: hsl(215, 32%, 27%);
+
+  font-size: 1.125em; /*REM = 18px*/
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--main-bg);
+
+  /* FONTS */
+  font-family: "Outfit", sans-serif;
+  color: var(--soft-blue);
+  font-weight: 300;
+}
+
+main {
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+}
+
+a,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: var(--cyan);
+}
+
+img {
+  max-width: 100%;
+}
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.3333rem;
+
+  flex-direction: column;
+  width: calc(23 / 1065 * 100vw + 22642em / 1278); /*relative to vw*/
+
+  box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.0952917);
+  border-radius: 0.8333rem;
+}
+
+.card__image {
+  width: calc(8 / 355 * 100vw + 19138em / 1278);
+  height: calc(8 / 355 * 100vw + 19138em / 1278);
+  border-radius: 0.4444rem;
+  margin-bottom: 1.3333em;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.card__image:hover::before {
+  content: "";
+  display: block;
+  border-radius: 0.4444rem;
+  width: 100%;
+  height: 100%;
+  background-color: var(--cyan);
+  opacity: 0.5;
+  position: absolute;
+}
+
+.card__image:hover::after {
+  content: url("/images/icon-view.svg");
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card__header {
+  font-size: 1.2222rem;
+  font-weight: 600;
+  line-height: 1.2727;
+  margin-bottom: calc(4 / 1065 * 100vw + 752em / 1584);
+}
+
+.card__header h1 {
+  font-size: inherit;
+}
+
+p {
+  line-height: 1.4444;
+  margin-bottom: calc(8 / 1065 * 100vw + 52em / 71);
+}
+
+.card__price {
+  font-size: 0.8333em;
+  line-height: 1.2667;
+  padding-bottom: calc(8 / 1065 * 100vw + 936em / 1065);
+
+  justify-content: space-between;
+
+  white-space: nowrap;
+}
+
+.card__price__eth {
+  color: var(--cyan);
+  font-weight: 600;
+}
+
+.card__price__eth span {
+  margin-left: 6.5px;
+}
+
+.card__price__days-left {
+  font-weight: 400;
+}
+
+.card__price__days-left span {
+  margin-left: 7.7px;
+}
+
+.creator {
+  border-top: 1px solid var(--line);
+  font-size: 0.8333em;
+  line-height: 1.2667;
+  font-weight: 400;
+  padding-top: 0.8889rem;
+  margin-bottom: calc(8 / 1065 * 100vw - 200em / 1065);
+
+  align-items: center;
+}
+
+.creator__image {
+  width: 1.833rem;
+  height: 1.833rem;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.creator span {
+  margin-left: 0.9375em;
+}
+
+footer {
+  position: absolute;
+  text-align: center;
+  width: 100%;
+  bottom: 20px;
+  margin-top: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
+/* FRONTEND MENTOR INITIAL CODE */
+
+.attribution {
+  font-size: 11px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
