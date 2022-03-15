@@ -107,7 +107,7 @@ p {
 }
 
 .card__price {
-  font-size: 0.8333em;
+  font-size: clamp(0.8333em, calc(1 / 1065 * 100vw + 1040em / 1278), 0.8889em);
   line-height: 1.2667;
   padding-bottom: calc(8 / 1065 * 100vw + 936em / 1065);
 
@@ -135,7 +135,7 @@ p {
 
 .creator {
   border-top: 1px solid var(--line);
-  font-size: 0.8333em;
+  font-size: clamp(0.8333em, calc(1 / 1065 * 100vw + 1040em / 1278), 0.8889em);
   line-height: 1.2667;
   font-weight: 400;
   padding-top: 0.8889rem;
